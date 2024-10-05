@@ -2,7 +2,8 @@
 
 export default class KosarElem{
     #elem = {}
-    constructor(elem,szuloElem){
+    constructor(elem,index,szuloElem){
+        this.index = index
         this.#elem = elem
         console.log(this.#elem)
         this.szuloElem = szuloElem
@@ -49,7 +50,7 @@ export default class KosarElem{
         this.torolGomb.on("click",() => {
             console.log("klikk")
 
-            const e = new CustomEvent("torolKosarbol",{detail:this.#elem} )
+            const e = new CustomEvent("torolKosarbol",{detail:this.index} )
             window.dispatchEvent(e)
 
         })

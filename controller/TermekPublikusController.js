@@ -44,7 +44,7 @@ export default class TermekPublikusController{
     kosarbolTorolEsemenyFigyelo(){
         $(window).on("torolKosarbol",(event) => {
             //console.log(event.detail)
-            let id = event.detail.id
+            let id = event.detail
             this.kosarmodel.listabolTorol(id)
             let ujLista = this.kosarmodel.getLista()
             new KosarTermekek(ujLista,$(".kosar-termekek"))

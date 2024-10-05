@@ -31,7 +31,8 @@ export default class KosarModel{
     }
 
     listabolTorol(id){
-        this.#lista = this.#lista.filter(listaElem => listaElem.id != id)
+        // this.#lista = this.#lista.filter(listaElem => listaElem.id != id)
+       this.#lista.splice(id,1)
         return this.#lista
     }
 

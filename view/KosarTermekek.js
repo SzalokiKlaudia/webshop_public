@@ -23,7 +23,7 @@ export default class KosarTermekek{
             console.log(this.#kosarLista)
         
             
-            new KosarElem(elem,this.szuloElem)
+            new KosarElem(elem,index,this.szuloElem)
 
 
         })
